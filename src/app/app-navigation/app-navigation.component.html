@@ -5,9 +5,8 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item [routerLink]="CONST.ROUTE_DASHBOARD" [routerLinkActive]="['is-active']" (click)="drawer.close()">Dashboard</a>
+      <a mat-list-item [routerLink]="CONST.ROUTE_ERROR" [routerLinkActive]="['is-active']" (click)="drawer.close()">Error</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,5 +22,7 @@
       <span>AxE-App</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
