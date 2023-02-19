@@ -19,3 +19,8 @@
 .is-active {
   background-color: red;
 }
+
+.mat-toolbar {
+  padding-top: env(safe-area-iset-top);
+  height: calc(56px + env(safe-area-iset-top));
+}

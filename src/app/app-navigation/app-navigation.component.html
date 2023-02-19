@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item [routerLink]="CONST.ROUTE_DASHBOARD" [routerLinkActive]="['is-active']" (click)="drawer.close()">Dashboard</a>
       <a mat-list-item [routerLink]="CONST.ROUTE_ERROR" [routerLinkActive]="['is-active']" (click)="drawer.close()">Error</a>
