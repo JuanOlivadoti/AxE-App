@@ -17,6 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { ErrorComponentComponent } from './core/components/error-component/error-component.component';
 import { IonicModule } from '@ionic/angular';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { IonicModule } from '@ionic/angular';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    HttpClientModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
